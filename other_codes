@@ -1,0 +1,21 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void toggleChars(string &S)
+{
+	for(auto &it : S){
+	if(isalpha(it)){
+		it ^= (1 << 5);
+	}
+	}
+}
+
+int main()
+{
+	string S = "GeKf@rGeek$";
+	toggleChars(S);
+	cout << "String after toggle " << endl;
+	cout << S << endl;
+	return 0;
+}
